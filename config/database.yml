@@ -15,4 +15,4 @@ production:
    database: school_management_app
    username: root
    password: phpmysql
-   host: localhost
+   host: localhost 
