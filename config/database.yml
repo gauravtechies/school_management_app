@@ -1,6 +1,6 @@
 development:
    adapter: mysql2
-   database: school_management_app
+   database: school_management_app 
    username: root
    password: phpmysql
    host: localhost
@@ -15,4 +15,4 @@ production:
    database: school_management_app
    username: root
    password: phpmysql
-   host: localhost 
+   host: localhost
