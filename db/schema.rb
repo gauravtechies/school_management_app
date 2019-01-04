@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_072851) do
+ActiveRecord::Schema.define(version: 2019_01_04_064203) do
+
+  create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "subject_teacher"
+    t.bigint "user_id"
+    t.text "info"
+    t.text "qualification"
+    t.index ["user_id"], name: "index_teachers_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -21,8 +30,10 @@ ActiveRecord::Schema.define(version: 2018_12_19_072851) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "role"
+    t.boolean "status"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "teachers", "users"
 end

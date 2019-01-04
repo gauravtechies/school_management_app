@@ -46,8 +46,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails' 
 gem 'jquery-ui-rails'
 gem 'coffee-rails', '~> 4.2'
-gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '~> 1.3'
 gem 'cancancan'
 gem 'toastr-rails'
 group :development, :test do
